@@ -10,4 +10,9 @@
     <Content Include="Program.cs" />
     <Content Include="Desafio.sln" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.151" />
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="Microsoft.Data.SQLClient" Version="5.1.1" />
+  </ItemGroup>
 </Project>
