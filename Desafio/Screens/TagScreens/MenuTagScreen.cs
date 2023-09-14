@@ -21,6 +21,8 @@ namespace Desafio.Screens.TagScreens
             Console.WriteLine("4 - Excluir Tag");
             Console.WriteLine();
             Console.WriteLine();
+            Console.WriteLine("5 - Sair");
+
             var option = short.Parse(Console.ReadLine()!);
 
 
@@ -37,6 +39,9 @@ namespace Desafio.Screens.TagScreens
                     break;
                 case 4:
                     DeleteTagScreen.Load();
+                    break;
+                case 5 :
+                    Program.Load();
                     break;
                 default: Load(); break;
             }

@@ -19,7 +19,7 @@ namespace Desafio.Screens.CategoryScreen
             Console.WriteLine("3 - Atualizar");
             Console.WriteLine("4 - Excluir Categoria");
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("5 - Sair");
             var option = short.Parse(Console.ReadLine()!);
 
 
@@ -36,6 +36,9 @@ namespace Desafio.Screens.CategoryScreen
                     break;
                 case 4:
                     DeleteCategoryScreen.Load();
+                    break;
+                case 5:
+                    Program.Load();
                     break;
                 default: Load(); break;
             }

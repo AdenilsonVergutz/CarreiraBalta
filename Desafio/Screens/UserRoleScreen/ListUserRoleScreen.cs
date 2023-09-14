@@ -24,7 +24,7 @@ namespace Desafio.Screens.UserRoleScreen
             var repository = new Repository<UserRole>(Database.Connection);
             var userRole = repository.Get();
             foreach (var item in userRole)
-                Console.WriteLine($"Código: {item.UserId} - Perfil código: {item.RoleId})");
+                Console.WriteLine($"Código usuário: {item.UserId} - Perfil código: {item.RoleId}");
         }
     }
 }

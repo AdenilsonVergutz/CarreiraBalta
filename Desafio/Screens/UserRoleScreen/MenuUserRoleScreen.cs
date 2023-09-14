@@ -19,7 +19,8 @@ namespace Desafio.Screens.UserRoleScreen
             Console.WriteLine("3 - Atualizar");
             Console.WriteLine("4 - Excluir");
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("5 - Voltar");
+
             var option = short.Parse(Console.ReadLine()!);
 
 
@@ -37,6 +38,10 @@ namespace Desafio.Screens.UserRoleScreen
                 case 4:
                     DeleteUserRoleScreen.Load();
                     break;
+                case 5:
+                        Program.Load();
+                    break;
+
                 default: Load(); break;
             }
         }

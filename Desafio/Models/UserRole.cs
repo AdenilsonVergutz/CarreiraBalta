@@ -11,9 +11,14 @@ namespace Desafio.Models
     [Table("[UserRole]")]
     public class UserRole
     {
+        
         public UserRole()
                     => Users = new List<User>();
     
+
+        [Key]
+
+        public int Id { get; set; }
         public int UserId { get; set; }
 
         public int RoleId { get; set; }

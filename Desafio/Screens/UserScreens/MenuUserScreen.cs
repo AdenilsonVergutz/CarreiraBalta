@@ -20,7 +20,8 @@ namespace Desafio.Screens.UserScreens
             Console.WriteLine("3 - Atualizar Usuário");
             Console.WriteLine("4 - Excluir Usuário");
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("5 - Sair");
+
             var option = short.Parse(Console.ReadLine()!);
 
 
@@ -38,7 +39,11 @@ namespace Desafio.Screens.UserScreens
                 case 4:
                     DeleteUserScreen.Load();
                     break;
+                 case 5:
+                    Program.Load();
+                    break;
                 default: Load(); break;
+
             }
         }
     }

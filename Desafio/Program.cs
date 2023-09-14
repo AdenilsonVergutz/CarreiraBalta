@@ -10,7 +10,7 @@ using Microsoft.Data.SqlClient;
 namespace Desafio
 {
 
-    class Program
+    public class Program
     {
 
         private const string CONNECTION_STRING = @"Server=localhost,1433;Database=Blog;User ID=sa;Password=1q2w3e4r@#$; TrustServerCertificate=True";
@@ -27,10 +27,10 @@ namespace Desafio
             Database.Connection.Close();
         }
 
-        private static void Load()
+        public static void Load()
         {
 
-            //Console.Clear();
+            Console.Clear();
             Console.WriteLine("Meu Blog");
             Console.WriteLine("--------------------");
             Console.WriteLine("O que deseja fazer?");
@@ -79,3 +79,16 @@ namespace Desafio
 
 
 }
+
+// CREATE TABLE [UserRole] (
+//     [UserId] INT NOT NULL,
+//     [RoleId] INT NOT NULL,
+//     [Id] INT NOT NULL IDENTITY(1,1)
+
+//     CONSTRAINT [PK_UserRole] PRIMARY KEY([Id], [UserId], [RoleId])
+//     CONSTRAINT [FK_UserRoleUser] FOREIGN KEY (UserId) REFERENCES [User]([Id]),
+//     CONSTRAINT [FK_UserRole] FOREIGN KEY (RoleId) REFERENCES [Role]([Id])
+// )
+
+
+// DROP TABLE [UserRole]
