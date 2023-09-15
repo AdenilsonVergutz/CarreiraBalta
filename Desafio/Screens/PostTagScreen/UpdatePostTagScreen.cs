@@ -9,7 +9,11 @@ namespace Desafio.Screens.PostTagScreen
 {
     public class UpdatePostTagScreen
     {
-public static void Load()
+
+
+        public static Repository<PostTag> _repository = new Repository<PostTag>(Database.Connection);
+
+        public static void Load()
         {
             Console.Clear();
             Console.WriteLine("Atualizando vinculo");
@@ -20,12 +24,14 @@ public static void Load()
             Console.Write("Código da Tag: ");
             var tagId = Console.ReadLine();
 
-            Update(new PostTag
-            {
-                PostId = int.Parse(postId),
-                TagId = int.Parse(tagId)
-            });
-            
+
+            var postTag = _repository.Get().FirstOrDefault(x => x.PostId == Convert.ToInt32(postId));
+            if (postTag != null)
+                Update(postTag);
+            else
+                Console.Write("Post Não localizado");
+
+
             Console.ReadKey();
             MenuPostTagScreen.Load();
         }

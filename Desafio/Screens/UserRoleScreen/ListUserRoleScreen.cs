@@ -26,7 +26,7 @@ namespace Desafio.Screens.UserRoleScreen
 
             foreach (var item in userRole)
 
-                Console.WriteLine($"Código usuário: {item.UserId} - Nome usuário: {item.UserName} - Perfil código: {item.RoleId} - Nome Perfil: {item.TagName}");
+                Console.WriteLine($"Usuário: {item.UserId} - {item.UserName} --- Perfil: {item.RoleId} - {item.TagName}");
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Desafio.Screens.TagScreens
 
             Console.Write("Slug: ");
             var slug = Console.ReadLine();
+            Console.ReadLine();
 
             Create(new Tag
             {
