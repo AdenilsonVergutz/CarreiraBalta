@@ -1,0 +1,101 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "PaymentContext.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/PaymentContext.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentContext.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PaymentContext.Shared/1.0.0": {
+      "type": "project",
+      "path": "../PaymentContext.Shared/PaymentContext.Shared.csproj",
+      "msbuildProject": "../PaymentContext.Shared/PaymentContext.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "PaymentContext.Shared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\adeni\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "c:\\CarreiraBalta\\CarreiraBalta\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj",
+      "projectName": "PaymentContext.Domain",
+      "projectPath": "c:\\CarreiraBalta\\CarreiraBalta\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj",
+      "packagesPath": "C:\\Users\\adeni\\.nuget\\packages\\",
+      "outputPath": "c:\\CarreiraBalta\\CarreiraBalta\\PaymentContext\\PaymentContext.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\adeni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "c:\\CarreiraBalta\\CarreiraBalta\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {
+              "projectPath": "c:\\CarreiraBalta\\CarreiraBalta\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
