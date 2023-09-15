@@ -92,3 +92,18 @@ namespace Desafio
 
 
 // DROP TABLE [UserRole]
+
+
+
+// CREATE TABLE [PostTag] (
+//     [Id] INT NOT NULL IDENTITY(1,1),
+//     [PostId] INT NOT NULL,
+//     [TagId] INT NOT NULL,
+    
+
+//     CONSTRAINT [PK_PostTag] PRIMARY KEY([Id], [PostId], [TagId]),
+//     CONSTRAINT [FK_Post] FOREIGN KEY (PostId) REFERENCES [Post]([Id]),
+//     CONSTRAINT [FK_Tag] FOREIGN KEY (TagId) REFERENCES [Tag]([Id])
+//  )
+
+//  DROP TABLE [PostTag]

@@ -7,7 +7,7 @@ using Desafio.Repositories;
 
 namespace Desafio.Screens.UserRoleScreen
 {
-    public class ListUserRoleScreen
+    public class ListUserRoleScreen:User
     {
         public static void Load()
         {
@@ -21,10 +21,12 @@ namespace Desafio.Screens.UserRoleScreen
 
         private static void List()
         {
-            var repository = new Repository<UserRole>(Database.Connection);
-            var userRole = repository.Get();
+            var repository = new UserRoleRepository(Database.Connection);
+            var userRole = repository.ObterUserRole();
+
             foreach (var item in userRole)
-                Console.WriteLine($"Código usuário: {item.UserId} - Perfil código: {item.RoleId}");
+
+                Console.WriteLine($"Código usuário: {item.UserId} - Nome usuário: {item.UserName} - Perfil código: {item.RoleId} - Nome Perfil: {item.TagName}");
         }
     }
 }

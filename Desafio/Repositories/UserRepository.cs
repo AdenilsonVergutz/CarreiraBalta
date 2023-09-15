@@ -28,7 +28,6 @@ namespace Desafio.Repositories
 
         var users = new List<User> ();
 
-
         var items = _connection.Query<User, Role, User>(
             query, 
             (user, role) =>
