@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtmBuilder.Core", "UtmBuilder.Core\UtmBuilder.Core.csproj", "{34793227-72D7-4BB1-B600-99E75298E55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtmBuilder.Core.Tests", "UtmBuilder.Core.Tests\UtmBuilder.Core.Tests.csproj", "{57BE5D96-C85C-4952-9B54-731B4E113D66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34793227-72D7-4BB1-B600-99E75298E55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34793227-72D7-4BB1-B600-99E75298E55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34793227-72D7-4BB1-B600-99E75298E55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34793227-72D7-4BB1-B600-99E75298E55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BE5D96-C85C-4952-9B54-731B4E113D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BE5D96-C85C-4952-9B54-731B4E113D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BE5D96-C85C-4952-9B54-731B4E113D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BE5D96-C85C-4952-9B54-731B4E113D66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
