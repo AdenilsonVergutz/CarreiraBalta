@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyStore", "DependencyStore.csproj", "{070903B6-EE9C-4882-A847-AA5A6C53ED37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{070903B6-EE9C-4882-A847-AA5A6C53ED37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{070903B6-EE9C-4882-A847-AA5A6C53ED37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{070903B6-EE9C-4882-A847-AA5A6C53ED37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{070903B6-EE9C-4882-A847-AA5A6C53ED37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51C3332B-E4FD-4830-8464-B5B7A63BF1F2}
+	EndGlobalSection
+EndGlobal
