@@ -108,7 +108,22 @@ namespace Desafio
 //-- DROP TABLE [Tag]
 //-- DROP TABLE[PostTag]
 
-//CREATE TABLE [User] (
+//CREATE TABLE [Role] (
+//    [Id] INT NOT NULL IDENTITY(1, 1),
+//    [Name] VARCHAR(80) NOT NULL,
+//    [Slug] VARCHAR(80) NOT NULL,
+
+//    CONSTRAINT[PK_Role] PRIMARY KEY([Id], [Name]),
+//    CONSTRAINT[UQ_Role_Slug] UNIQUE([Slug]),
+//    CONSTRAINT[UQ_Role_Name] UNIQUE([Slug]),
+
+
+//)
+//CREATE NONCLUSTERED INDEX [IX_Role_Slug] ON[Role]([Slug])
+
+
+
+//CREATE TABLE[User] (
 //    [Id] INT NOT NULL IDENTITY(1, 1),
 //    [Name] NVARCHAR(80) NOT NULL,
 //    [Email] VARCHAR(200) NOT NULL,
@@ -117,33 +132,30 @@ namespace Desafio
 //    [Image] VARCHAR(2000) NOT NULL,
 //    [Slug] VARCHAR(80) NOT NULL,
 
+//    [RoleId] INT NOT NULL,
+
+//    [RoleName] VARCHAR(80) NULL,
+
 //    CONSTRAINT[PK_User] PRIMARY KEY([Id]),
 //    CONSTRAINT[UQ_User_Email] UNIQUE([Email]),
-//    CONSTRAINT[UQ_User_Slug] UNIQUE([Slug])
+//    CONSTRAINT[UQ_User_Slug] UNIQUE([Slug]),
+//	CONSTRAINT[FK_UserRole] FOREIGN KEY([RoleId], [RoleName]) REFERENCES[Role]([Id], [Name]),
+
 //)
 //CREATE NONCLUSTERED INDEX [IX_User_Email] ON[User]([Email])
 //CREATE NONCLUSTERED INDEX [IX_User_Slug] ON[User]([Slug])
 
-//CREATE TABLE[Role] (
-//    [Id] INT NOT NULL IDENTITY(1, 1),
-//    [Name] VARCHAR(80) NOT NULL,
-//    [Slug] VARCHAR(80) NOT NULL,
+//
+// --CREATE TABLE[UserRole] (
+// --    [UserId] INT NOT NULL,
+// --    [RoleId] INT NOT NULL,
+// --    [Id] INT NOT NULL IDENTITY(1,1)
 
-//    CONSTRAINT[PK_Role] PRIMARY KEY([Id]),
-//    CONSTRAINT[UQ_Role_Slug] UNIQUE([Slug])
-//)
-//CREATE NONCLUSTERED INDEX [IX_Role_Slug] ON[Role]([Slug])
-
-//CREATE TABLE[UserRole] (
-//     [UserId] INT NOT NULL,
-//     [RoleId] INT NOT NULL,
-//     [Id] INT NOT NULL IDENTITY(1,1)
-
-//     CONSTRAINT[PK_UserRole] PRIMARY KEY([Id], [UserId], [RoleId])
-//     CONSTRAINT[FK_UserRoleUser] FOREIGN KEY(UserId) REFERENCES[User]([Id]),
-//     CONSTRAINT[FK_UserRole] FOREIGN KEY(RoleId) REFERENCES[Role]([Id])
-// )
-
+// --CONSTRAINT[PK_UserRole] PRIMARY KEY([Id], [UserId], [RoleId])
+// --CONSTRAINT[FK_UserRoleUser] FOREIGN KEY(UserId) REFERENCES[User]([Id]),
+// --CONSTRAINT[FK_UserRole] FOREIGN KEY(RoleId) REFERENCES[Role]([Id])
+// --)
+//
 //CREATE TABLE[Category] (
 //    [Id] INT NOT NULL IDENTITY(1, 1),
 //    [Name] VARCHAR(80) NOT NULL,
@@ -154,6 +166,19 @@ namespace Desafio
 //)
 //CREATE NONCLUSTERED INDEX [IX_Category_Slug] ON[Category]([Slug])
 
+
+//CREATE TABLE[Tag] (
+//     [Id] INT NOT NULL IDENTITY(1, 1),
+//     [Name] VARCHAR(80) NOT NULL,
+//     [Slug] VARCHAR(80) NOT NULL,
+
+//     CONSTRAINT[PK_Tag] PRIMARY KEY([Id]),
+//     CONSTRAINT[UQ_TagName] UNIQUE([Name]),
+//     CONSTRAINT[UQ_Tag_Slug] UNIQUE([Slug])
+//)
+//CREATE NONCLUSTERED INDEX [IX_Tag_Slug] ON[Tag]([Slug])
+
+
 //CREATE TABLE[Post] (
 //     [Id] INT NOT NULL IDENTITY(1, 1),
 //     [CategoryId] INT NOT NULL,
@@ -163,7 +188,7 @@ namespace Desafio
 //     [Body] TEXT NOT NULL,
 //     [Slug] VARCHAR(80) NOT NULL,
 //     [CreateDate] DATETIME NOT NULL DEFAULT(GETDATE()),
-//     [LastUpdateDate] DATETIME NOT NULL DEFAULT(GETDATE()),
+//     [LastUpdateDate] DATETIME NULL DEFAULT(GETDATE()),
 //     [TagId] INT NOT NULL,
 //     [TagName] VARCHAR(80) NOT NULL,
 
@@ -174,17 +199,10 @@ namespace Desafio
 //     CONSTRAINT[FK_Post_TagName] FOREIGN KEY([TagName]) REFERENCES[Tag]([Name]),
 //     CONSTRAINT[UQ_Post_Slug] UNIQUE([Slug])
 // )
+//CREATE NONCLUSTERED INDEX [IX_Post_Slug] ON[Post]([Slug])
 
-//CREATE TABLE[Tag] (
-//     [Id] INT NOT NULL IDENTITY(1, 1),
-//     [Name] VARCHAR(80) NOT NULL,
-//     [Slug] VARCHAR(80) NOT NULL,
-
-//     CONSTRAINT[PK_Tag] PRIMARY KEY([Id]),
-//     CONSTRAINT[UQ_TagName] UNIQUE([Name]),
-//     CONSTRAINT[UQ_Tag_Slug] UNIQUE([Slug])
-// )
-
+//
+//
 //CREATE TABLE[PostTag] (
 //      [Id] INT NOT NULL IDENTITY(1,1),
 //      [PostId] INT NOT NULL,
@@ -196,9 +214,9 @@ namespace Desafio
 //      CONSTRAINT[FK_Tag] FOREIGN KEY(TagId) REFERENCES[Tag]([Id])
 //   )
 
-//INSERT INTO[UserRole] VALUES (
-//            1,
-//            1)
+//--INSERT INTO[UserRole] VALUES(
+//--1,
+//--1)
 
 //INSERT INTO[User] VALUES (
 //            'Adenilson Vergutz',
@@ -206,7 +224,9 @@ namespace Desafio
 //            'HASH',
 //            '8X Microsoft MVP',
 //            'https://',
-//            'Andre-baltieri')
+//            'Andre-baltieri',
+//			1,
+//			'Autor')
 
 //INSERT INTO[Role] VALUES (
 //            'Autor',

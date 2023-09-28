@@ -28,6 +28,10 @@ namespace Desafio.Models
 
         public string Slug { get; set; }
 
+        public int RoleId { get; set; }
+
+        public string? RoleName { get; set; }
+
 
         [Write(false)]
         public List<Role> Roles {get; set;}

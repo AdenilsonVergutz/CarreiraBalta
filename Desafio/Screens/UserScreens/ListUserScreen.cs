@@ -23,8 +23,12 @@ namespace Desafio.Screens.UserScreens
         {
             var repository = new Repository<User>(Database.Connection);
             var users = repository.Get();
+
+            Console.WriteLine("Código   --   Nome    -   Email   -    Bio     -   Perfil");
+
+
             foreach (var item in users)
-                Console.WriteLine($"Código: {item.Id} - {item.Name} - {item.Email} - {item.PasswordHash} - {item.Bio} - {item.Image} -  ({item.Slug})");
+            Console.WriteLine($"{item.Id} - {item.Name} - {item.Email} - {item.Bio} - {item.RoleId} - ({item.RoleName})");
         }
     }
 }

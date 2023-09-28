@@ -15,7 +15,7 @@ namespace Desafio.Screens.UserRoleScreen
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
             Console.WriteLine("1 - Listar");
-            Console.WriteLine("2 - Cadastrar vinculos");
+            //Console.WriteLine("2 - Cadastrar vinculos");
             Console.WriteLine("3 - Atualizar");
             Console.WriteLine("4 - Excluir");
             Console.WriteLine();
@@ -29,9 +29,9 @@ namespace Desafio.Screens.UserRoleScreen
                 case 1:
                     ListUserRoleScreen.Load();
                     break;
-                case 2:
-                    CreateUserRoleScreen.Load();
-                    break;
+                //case 2:
+                //    CreateUserRoleScreen.Load();
+                //    break;
                 case 3:
                     UpdateUserRoleScreen.Load();
                     break;

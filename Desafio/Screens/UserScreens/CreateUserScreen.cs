@@ -27,7 +27,9 @@ namespace Desafio.Screens.UserScreens
             var image = Console.ReadLine();
             Console.Write("Slug: ");
             var slug = Console.ReadLine();
-         
+            Console.WriteLine("Código do perfil: ");
+            var roleId = Console.ReadLine();
+
 
             Create(new User
             {
@@ -36,7 +38,8 @@ namespace Desafio.Screens.UserScreens
                 PasswordHash = passwordHash,
                 Bio = bio,
                 Image = image,
-                Slug = slug
+                Slug = slug,
+                RoleId = int.Parse(roleId)
             });
             Console.ReadKey();
             MenuUserScreen.Load();
